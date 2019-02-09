@@ -37,7 +37,7 @@ public class PdfReport extends Document {
         addTitle();
         add(Chunk.NEWLINE);
         addHeader();
-        addInfoElementValues();
+        addElementValues();
         close();
     }
 
@@ -56,13 +56,13 @@ public class PdfReport extends Document {
         add(table);
     }
 
-    private void addInfoElementValues() throws DocumentException {
+    private void addElementValues() throws DocumentException {
         for (Element element : application.getElements()) {
-            addInfoElementValue(element);
+            addElementValue(element);
         }
     }
 
-    private void addInfoElementValue(Element element) throws DocumentException {
+    private void addElementValue(Element element) throws DocumentException {
         addParagraph(element.getCode(), subTitleFont);
         for (Field field : element.getFields()) {
             addFieldValue(field);
