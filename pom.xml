@@ -7,6 +7,9 @@
     <artifactId>pdf-report</artifactId>
     <version>0.1-SNAPSHOT</version>
     <description></description>
+    <properties>
+        <sonar.coverage.exclusions>**/model/*</sonar.coverage.exclusions>
+    </properties>
     <build>
         <plugins>
             <plugin>
@@ -37,7 +40,7 @@
         <dependency>
             <groupId>org.projectlombok</groupId>
             <artifactId>lombok</artifactId>
-            <version>1.16.0</version>
+            <version>1.16.22</version>
             <scope>compile</scope>
         </dependency>
         <dependency>
